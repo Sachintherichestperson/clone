@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instaclone</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="home">
+        <div class="logo">
+            <img src="/images/ze.png" alt="">
+            <a href="#"><span class="logo-comment">&#128172;</span></a>
+        </div>
+        <div class="story">
+            <div class="circle"><img src="/images/trial.avif" alt=""></div>
+            <div class="circle"><img src="/images/imh.jpeg" alt=""></div>
+            <div class="circle"><img src="/images/uo.webp"  alt=""></div>
+            <div class="circle"><img src="/images/q.webp" alt=""></div>
+            <div class="circle"><img src="/images/imh.jpeg" alt=""></div>
+            <div class="circle"><img src="/images/imh.jpeg" alt=""></div>
+            <div class="circle"><img src="/images/uo.webp"  alt=""></div>
+            <div class="circle"><img src="/images/q.webp" alt=""></div>
+            <div class="circle"><img src="/images/imh.jpeg" alt=""></div>
+            <div class="circle"><img src="/images/trial.avif" alt=""></div>
+            <div class="circle"><img src="/images/trial.avif" alt=""></div>
+        </div>
+        <div class="posts">
+            
+                <% if(posts.length > 0){%>
+                <% posts.forEach(function(post){ %> 
+                    <div class="post">
+                    <div class="username">
+                        <span class="container"><img src="/images/trial.avif" alt="" class="cir"></span>
+                        <p class="user"><%= post.name.username %></p>
+
+                    </div>
+                    <img src="data:image/jpeg;base64,<%= post.post.toString('base64') %>" alt="" class="image">
+                    <div class="link">
+                    <span class="like">&#9825</span>
+                    <span class="comment">&#128172</span>
+                    <span class="share">&#10146</span>
+                </div>
+                    <div class="caption">
+                        <p><span><%=post.name.username %></span>
+                       <%= post.caption %></p>
+                       <div class="comments">View all comments</div>
+                    </div>
+                </div>
+                    <%})%>
+                    <%}%>
+        </div>
+        <div class="extra">
+            No posts 
+        </div>
+                
+            <div class="icons">
+                <div>&#8962;</div>
+                <div class="search-icon">&#128269;</div>
+                <a href="/upload"><div>&#9856;</div></a>
+                <div>&#127909;</div>
+                <a href="/profile"><div class="container"><img src="/images/trial.avif" alt="" class="pro"></div></a>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="logo">
+            <img src="/images/ze.png" alt="">
+        </div>
+        <div class="profile-header">
+            <img src="/images/trial.avif" alt="Profile Picture" class="profile-pic">
+            <div class="follow">
+                <p><span>15</span>posts</p>
+                <p><span>200</span>Followers</p>
+                <p><span>167</span>Following</p>
+            </div>
+        </div>
+            <div class="about">
+                <h1 class="name"><%= user.username%></h1>
+            <p class="bio">A short bio about yourself goes here.</p>
+        </div>
+        
+        <div class="images">
+            <div class="posts">
+                <% if(posts.length > 0){%>
+            <% posts.forEach(function(post){ %>
+            
+                <div class="post">
+                    <img src="data:image/jpeg;base64,<%= post.post.toString('base64') %>" alt="" class="image">
+                </div>
+                <% }) %>
+            <% }else { %>
+                No Posts Available
+            <% } %>
+            
+        </div>
+            
+        </div>
+    </div>
+        <div class="icons">
+            <a href="/home"><div>&#8962;</div></a>
+            <div class="search-icon">&#128269;</div>
+            <a href="/upload"><div>&#9856;</div></a>
+            <div>&#127909;</div>
+           <div class="container"><img src="/images/trial.avif" alt="" class="pro"></div>
+        </div>
+    
+</body>
+</html>

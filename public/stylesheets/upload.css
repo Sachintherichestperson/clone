@@ -1,0 +1,68 @@
+@media (max-width: 320px) {
+    body {
+        color: white;
+        width: 100%;
+        margin: 0; 
+        padding: 0;
+    }
+
+    .home {
+        width: 300px;
+        height: 535px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        background-color: black;
+        width: 320px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center the form elements vertically */
+    }
+
+    input {
+        padding: 10px;
+        margin: 10px; /* Add margin for spacing */
+        font-size: 20px;
+    }
+
+    .icons {
+        position: fixed;
+        bottom: 0; 
+        left: 0; 
+        right: 0; 
+        background-color: rgb(0, 0, 0); 
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .icons div{
+        color: white; 
+        font-size: 30px; 
+    }
+
+    .search-icon {
+        font-size: 30px; 
+        color: black; 
+        background-color: transparent; 
+    }
+
+    .pro {
+        width: 30px; 
+        height: 30px;
+        border-radius: 50%; 
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        margin-top: 5px;
+        margin-right: 10px;
+        border: 1px solid black;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
